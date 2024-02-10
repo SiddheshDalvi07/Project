@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700|Montserrat:700" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 300;
+
+        }
+        body {
+            background-color: black;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #F7DDD9;
+        }
+
+        .container {
+            /* border: 2px solid red; */
+            display: block;
+            width: 100%;
+            margin: auto;
+            /* padding-top: 160px; */
+            height: 800px;
+            box-sizing: border-box;
+            text-align: center;
+            background: url('abstract-background-black-background-amoled-3840x2160-8969.jpg') no-repeat scroll center/ cover;
+            
+        }
+
+        .login {
+            color: #F7DDD9;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 10px;
+            backdrop-filter: blur(5px) saturate(47%) contrast(95%);
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            /* margin-top: 160px; */
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0px 0px 10px #4F6C6B;
+            position: relative;
+            top: 160px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            background-color: transparent;
+            backdrop-filter: blur(5px) saturate(47%) contrast(95%);
+            color: #ffffff;
+            margin-bottom: 15px;
+            height: 30px;
+            font-size: 16px;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 200px;
+            
+            
+        }
+
+        label {
+            /* border: 2px solid red; */
+            display: inline-block;
+            width: 70px;
+        }
+
+        .btn {
+            padding: 10px;
+            /* border: 2px solid red; */
+        }
+
+        button[type=submit] {
+            display: block;
+            width: 110px;
+            margin: auto;
+            /* border: 2px solid red; */
+            background-color: #4F6C6B;
+            height: 35px;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #4F6C6B;
+            
+        }
+
+        button[type=submit] {
+            transition: transform .3s ease;
+        }
+
+        button[type=submit]:hover {
+            background-color: #EDEDED;
+            color: #1E292B;
+            transform: scale(1.1);
+        }
+
+        .btn a{
+            /* border: 2px solid red; */
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: black;
+        }
+
+        .register {
+            /* border: 2px solid red; */
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* .register:hover {
+            border: 2px solid red;
+            text-align: center;
+            padding: 12px;
+            transform: scale(1.1);
+        } */
+
+        .register a {
+            text-decoration: none;
+            color: #F7DDD9;
+            transition: transform .3s ease;
+        }
+
+        .reg1 {
+            /* border: 2px solid red; */
+            transition: transform .3s ease;
+
+        }
+
+        .reg1:hover {
+            color: #4F6C6B;
+            transform: scale(1.1);
+            display: inline-block;
+        }
+
+
+        span {
+            padding-right: 15px;
+        }
+
+        .footer {
+
+            color: #F7DDD9;
+            text-align: center;
+            height: 100px;
+            background-color: black;
+            margin: 0px;
+            padding: 50px;
+        
+        }
+
+        @media only screen and (max-width: 600px) {
+            .login {
+                width: 90%;
+            }
+        }
+
+        .marq1 {
+            color: white;
+            width: 100%;
+            position: relative;
+            top: 250px;
+        }
+
+
+
+
+
+
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%; /* Ensures the header takes up the full width */
+            height: 60px; /* Set the height of the header */
+        }
+
+
+        .navbar {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+           
+        }
+
+        .navbar ul {
+            overflow: visible;
+            
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            /* margin: 3px auto; */
+            color: #ffffff;
+            padding: 10px 43px;
+        }
+
+
+        .navbar li a {
+            padding: 12px 43px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+            height: 13px;
+            width: 150px;
+            color: #ffffff;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 28px;
+            
+        }
+        .navbar li a:hover{
+            color: #F7DDD9;
+            background-color: #1E292B;
+            box-shadow: 0px 0px 10px #EDEDED;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#service">Service</a></li>
+
+            </ul>
+        </nav>
+    </header>  
+    <div class="container">
+
+        <div class="login">
+            <h2>Login Page</h2>
+            <div class="form">
+                <form action="homepage.html" method="post" class="form1">
+                    <div class="elements">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" title="Please enter your username." required />
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" title="Password must contain atleast one digit, one lowercase letter, one uppercase letter, one special character (@!#$_%?) and minumum of 8 character." pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[@!#$_%?]).{8,16}$" required>
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit"><a href="homepage.html">Login</a></button>
+                    </div>
+
+                </form>
+                <div class="register">
+                    <span>Don't have an account ?</span><a href="register.html" class="reg1">Register here</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="marq1">
+            <marquee behavior="scroll" direction="left">This is a login page</marquee>
+
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; All rights reserved.<br />
+        Designed by Siddhesh Dalvi
+    </footer>
+</body>
+
+</html>

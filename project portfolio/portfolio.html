@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -38,10 +38,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
+    display: block;
 }
 
 nav ul li a:hover {
     color: #ffc107;
+    transform: scale(1.1);
 }
 
 section {
@@ -51,13 +53,22 @@ section {
 h1, h2, h3 {
     color: #333;
 }
+h3:hover{
+    color: #ffc107;
+}
+h2:hover{
+    color: #ffc107;
+}
+h1:hover{
+    color: #ffc107;
+}
 
 .project {
     margin-bottom: 40px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px 3px rgba(129, 118, 118, 0.1);
 }
 
 .project h3 {
@@ -134,12 +145,14 @@ button[type="submit"]:hover {
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
+            <h3>Project 1 : Login and Register Page</h3>
+            <p>This login and register page features a sleek and modern design, utilizing a two-column layout to display a brand image and form inputs side by side. The page uses the Bootstrap grid system to align the elements and ensure responsiveness across different screen sizes.
+
+                The login form includes fields for email address and password, as well as a "forgot password?" link for users who need to reset their password. The register form includes fields for name, username, email, and password, as well as a checkbox for agreeing to terms and conditions.</p>
         </div>
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2</p>
+            <h3>Project 2 : Portfolio</h3>
+            <p>The project demonstrates my proficiency in HTML, CSS, and JavaScript, as well as my ability to design and implement responsive user interfaces. The project was a great opportunity to explore different design and functionality options, and I'm excited to continue improving and adding features to it.</p>
         </div>
     </section>
 

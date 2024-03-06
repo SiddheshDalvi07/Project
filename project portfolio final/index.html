@@ -14,19 +14,19 @@
     <header>
         <div class="logo"><span>S</span>iddhesh.</div>
         <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" style="--i:1;">Home</a></li>
+            <li><a href="#about" style="--i:2;">About</a></li>
+            <li><a href="#service" style="--i:3;">Service</a></li>
+            <li><a href="#skills" style="--i:4;">Skills</a></li>
+            <li><a href="#portfolio" style="--i:5;">Portfolio</a></li>
+            <li><a href="#contact" style="--i:6;">Contact</a></li>
         </ul>
         <div id="menu-icon" class='bx bx-menu'></div>
     </header>
 
     <!-- home sectiom ----------------------------------------------------->
     <section id="home" class="home">
-        <div class="home-content">
+        <div class="home-content scroll-scale">
             <h1>Hi! I'm Siddhesh Dalvi</h1>
             <div class="change-text">
                 <h3>and I'm</h3>
@@ -45,11 +45,11 @@
             <div class="info-box">
                 <div class="email-info">
                     <h5>Email :</h5>
-                    <span>dalvisiddhesh3@gmail.com</span>
+                    <span><a href="mailto:dalvisiddhesh3@gmail.com">dalvisiddhesh3@gmail.com</a></span>
                 </div>
                 <div class="github-info">
                     <h5>Github :</h5>
-                    <span>github.com/SiddheshDalvi07</span>
+                    <span><a href="http://github.com/SiddheshDalvi07" target="_blank" rel="noopener noreferrer">github.com/SiddheshDalvi07</a></span>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
         </div>
 
 
-        <div class="home-image">
+        <div class="home-image scroll-scale">
             <div class="img-box">
                 <img src="img/LS20240222022933.png" alt="">
             </div>
@@ -137,7 +137,7 @@
 
     <section id="about" class="about">
 
-        <div class="img-about">
+        <div class="img-about scroll-scale">
 
             <img src="img/LS20240222022649.png" alt="">
 
@@ -212,7 +212,7 @@
         </div>
 
 
-        <div class="about-content">
+        <div class="about-content scroll-scale">
             <span>Let me introduce myself</span>
             <h2>About Me</h2>
             <h3>A story of good</h3>
@@ -231,12 +231,12 @@
     <!-- services sectiom ----------------------------------------------------->
 
     <section id="service" class="services">
-        <div class="main-text">
+        <div class="main-text scroll-scale">
             <span>what i will do for you</span>
             <h2>Our Services</h2>
         </div>
 
-        <div class="section-services">
+        <div class="section-services scroll-bottom">
             <div class="service-box">
                 <i class='bx bx-desktop service-icon'></i>
                 <h3>Frontend Designer</h3>
@@ -276,12 +276,12 @@
     <!-- skill section ----------------------------------------------------->
 
     <section id="skills" class="skills">
-        <div class="main-text">
+        <div class="main-text scroll-scale">
             <span>technical and professional</span>
             <h2>My Skills</h2>
         </div>
         <div class="skill-main">
-            <div class="skill-left">
+            <div class="skill-left scroll-scale">
                 <h3>Technical Skills</h3>
                 <div class="skill-bar">
                     <div class="info">
@@ -320,7 +320,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skill-right">
+            <div class="skill-right scroll-scale">
                 <h3>Professional Skills</h3>
                 <div class="professional">
                     <div class="box">
@@ -359,20 +359,20 @@
     <!-- portfolio section ----------------------------------------------------->
 
     <section id="portfolio" class="portfolio">
-        <div class="main-text">
+        <div class="main-text scroll-scale">
             <span>What i will do for you</span>
             <h2>Latest project</h2>
         </div>
 
         <div class="container">
-            <div class="fillter-buttons">
-                <button class="btn" data-filter="all">All</button>
-                <button class="btn" data-filter=".product">Product</button>
-                <button class="btn" data-filter=".inter">Interacting</button>
-                <button class="btn" data-filter=".web">Web App</button>
+            <div class="fillter-buttons scroll-scale">
+                <button class="button" data-filter="all">All</button>
+                <button class="button" data-filter=".product">Product</button>
+                <button class="button" data-filter=".inter">Interacting</button>
+                <button class="button" data-filter=".web">Web App</button>
             </div>
 
-            <div class="portfolio-gallery">
+            <div class="portfolio-gallery scroll-bottom">
                 <div class="port-box mix product">
                     <div class="port-image">
                         <img src="img/1.jpg" alt="">
@@ -462,7 +462,7 @@
             <h2>Contact Me</h2>
         </div>
 
-        <form action="#">
+        <form action="#" class="scroll-bottom">
             <input type="text" placeholder="Your Name">
             <input type="email" placeholder="Your Email">
             <input type="text" placeholder="Your Address">
@@ -477,7 +477,7 @@
     <!-- footer website --------------------------------------------------------------------------------------->
 
     <footer>
-        <p>Copyright &copy; 2024 by Siddhesh Dalvi || All Rights Reserved.</p>
+        <p class="scroll-bottom">Copyright &copy; 2024 by Siddhesh Dalvi || All Rights Reserved.</p>
         <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
     </footer>
 

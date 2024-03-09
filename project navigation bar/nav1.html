@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --color-primary: #0073ff;
+            --color-white: #e9e9e9;
+            --color-black: #141d28;
+            --color-black-1: #212b38;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #0073ff;
+        }
+
+        .menubar {
+            background-color: var(--color-black);
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            
+        }
+
+        .logo {
+            color: var(--color-white);
+            font-size: 30px;
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .menubar ul {
+            list-style: none;
+            display: flex;
+           
+        }
+
+        .menubar ul li {
+            padding: 10px 30px;
+            position: relative;
+            
+        }
+
+        .menubar ul li a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 20px;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .menubar ul li a:hover {
+            color: var(--color-primary);
+        }
+
+        /* ul li.active a {
+            color: var(--color-primary);
+        } */
+
+        .dropdown {
+            display: none;
+        }
+
+        .menubar ul li:hover .dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: var(--color-black);
+            
+        }
+
+        .menubar ul li:hover .dropdown ul {
+            display: block;
+            margin: 10px;
+            
+        }
+
+        .menubar ul li:hover .dropdown ul li {
+            width: 150px;
+            padding: 10px;
+            
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px;
+            padding-top: 3px;
+            
+        }
+
+        .dropdown1 {
+            display: none;
+        }
+
+        .dropdown ul li:hover .dropdown1 {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 150px;
+            background-color: var(--color-black);
+            
+
+        }
+
+        .hero {
+            height: calc(100vh - 80px);
+            background:url('https://wallpapercave.com/wp/wp2506797.jpg') no-repeat fixed center /cover ;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menubar">
+        <h1 class="logo">Siddhesh <span>Dalvi.</span></h1>
+
+        <ul id="menu">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">College</a></li>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Faculty<i class="fas fa-caret-right"></i></a>
+                            <div class="dropdown1">
+                                <ul>
+                                    <li><a href="#">Team1</a></li>
+                                    <li><a href="#">Team2</a></li>
+                                    <li><a href="#">Team3</a></li>
+                                    <li><a href="#">Team4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Learn more</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Team<i class="fas fa-caret-right"></i></a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <section class="hero">
+        &nbsp;
+    </section>
+    <!-- <script>
+        const listItems = document.querySelectorAll('#menu li');
+
+        // Add a click event listener to each list item
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the "active" class from all list items
+                listItems.forEach(item => item.classList.remove('active'));
+
+                // Add the "active" class to the clicked list item
+                item.classList.add('active');
+            });
+        });
+    </script> -->
+</body>
+
+</html>

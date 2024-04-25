@@ -3,9 +3,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
-urlspattern = [
-        path('',(views.index)),
+urlpatterns = [
+        path('',views.home),
+        path('index',views.index),
 ]
 
 if settings.DEBUG:
-    urlspattern += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

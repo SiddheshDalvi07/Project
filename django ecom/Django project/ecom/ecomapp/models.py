@@ -6,6 +6,7 @@ class Product(models.Model):
     name=models.CharField(max_length=100)
     price=models.FloatField()
     pdetails=models.CharField(max_length=300)
+    xdetails=models.CharField(max_length=600,default="product core details")
     category=models.IntegerField(choices=CATEGORY_CHOICES)
     is_active=models.BooleanField(default=True)
     pimage=models.ImageField(upload_to='images')

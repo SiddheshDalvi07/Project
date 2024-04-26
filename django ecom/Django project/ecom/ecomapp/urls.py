@@ -5,7 +5,8 @@ from . import views
 
 urlpatterns = [
         path('',views.home),
-        path('index',views.index),
+        path('pdetails/', views.product_detail,name='product_details'),
+        
 ]
 
 if settings.DEBUG:

@@ -5,7 +5,13 @@ from . import views
 
 urlpatterns = [
         path('',views.home),
-        path('pdetails/', views.product_detail,name='product_details'),
+        path('productdetail/<pid>', views.productdetail),
+        path('catfilter/<cid>',views.catfilter),
+        path('sortbyprice/<s>',views.sortbyprice),
+        path('register/',views.register),
+        path('login/',views.user_login),
+        path('logout/',views.user_logout),
+        path('addtocart/<pid>',views.addtocart),
         
 ]
 

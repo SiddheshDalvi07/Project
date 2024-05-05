@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Product(models.Model):
@@ -10,7 +11,14 @@ class Product(models.Model):
     category=models.IntegerField(choices=CATEGORY_CHOICES)
     is_active=models.BooleanField(default=True)
     pimage=models.ImageField(upload_to='images')
+    def __str__(self):
+        return self.name
 
+class Cart(models.Model):
+    uid = models.ForeignKey(User,on_delete=models.CASCADE,db_column='uid')
+    pid = models.ForeignKey(Product,on_delete=models.CASCADE,db_column='pid')
+    def __str__(self):
+        return self.uid.username + " " + self.pid.name
 
 
 

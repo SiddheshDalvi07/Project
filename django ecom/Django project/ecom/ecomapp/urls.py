@@ -8,6 +8,7 @@ urlpatterns = [
         path('productdetail/<pid>', views.productdetail),
         path('catfilter/<cid>',views.catfilter),
         path('sortbyprice/<s>',views.sortbyprice),
+        path('range',views.pricerange),
         path('register/',views.register),
         path('login/',views.user_login),
         path('logout/',views.user_logout),

@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="https://fonts.cdnfonts.com/css/gobold" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .bg-rock {
+    background: url('{% static '/images/bg.jpg' %}') no-repeat scroll center center/cover;
+    height: 1000px;
+}
+  </style>
+
+ 
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- navbar start -------------------------------->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid ">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item me-3">
+                  <a class="nav-link active" aria-current="page" href="/">Offers</a>
+                </li>
+                <li class="nav-item me-3 ">
+                  <a class="nav-link " aria-current="page" href="#">Membership</a>
+                </li>
+                <li class="nav-item  me-3">
+                  <a class="nav-link" aria-current="page" href="#">Personal Training</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="#">Classes</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="#">Nutrition</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="#">Careers</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="#">Location</a>
+                </li>
+              </ul>
+
+
+              <ul class="navbar-nav ms-auto">
+                <li class=" dropdown  ">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Account
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Member Login</a></li>
+
+                    <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Trainer Login</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Admin Login</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+  <!-- navbar end -------------------------------->
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> -->
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+</body>
+
+</html>

@@ -5,6 +5,8 @@ from django.conf.urls import static
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('offers/', views.offers, name='offers'),
+    path('offers/1-day-free-guest-pass/', views.freepass, name='1-day-free-guest-pass'),
 ]
 
 # if settings.DEBUG:  

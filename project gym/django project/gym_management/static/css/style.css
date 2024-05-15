@@ -135,6 +135,7 @@ h2 {
   font-style: italic;
   line-height: 1.1em;
   letter-spacing: -1px;
+  text-decoration: none;
 }
 
 .css2 {
@@ -145,6 +146,8 @@ h2 {
   font-style: italic;
   line-height: 1.1em;
   letter-spacing: -1px;
+  text-decoration: none;
+  
 }
 
 .btn-orange {
@@ -202,3 +205,15 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+  /* Define the scale transform for the card */
+  .card-hover {
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  /* Scale the card on hover */
+  .card-hover:hover {
+    
+    transform: scale(1.05); /* Adjust the scale factor as needed */
+  }

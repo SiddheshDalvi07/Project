@@ -13,6 +13,10 @@ urlpatterns = [
         path('login/',views.user_login),
         path('logout/',views.user_logout),
         path('addtocart/<pid>',views.addtocart),
+        path('viewcart/',(views.viewcart)),
+        path('remove/<cid>',views.removefromcart),
+        path('add_quantity/<cid>/', views.add_quantity),
+        path('remove_quantity/<cid>/', views.remove_quantity),
         
 ]
 

@@ -1,37 +1,65 @@
 {% extends 'base.html' %}
+{% block 'content' %}
+
 {% load static %}
 
 
-{% block 'content' %}
-
-            <!-- cart start -->
-            <div class="row mt-3">
-                <div class="col-md-9">
-                    <h5 class="bg-body-secondary p-2">Customer Details</h5>
-                    <p><strong>Email:sid@gmail.com</strong></p>
-                    <h5 class="bg-body-secondary p-2">Shipping Details</h5>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="#" alt="" class="img-thumbnail">
-                        </div>
-                        <div class="col-md-8">
-                            <p><strong>Name: abcd</strong></p>
-                            <p><strong>Price: Abcd</strong></p>
-                            <p><strong>Category: Abcd</strong></p>
-                            <p><strong>Details: Abcd</strong></p>
-                            <p><strong>Quantity: 1</strong></p>
-                            <button class="btn btn-primary">Remove</button>
-                            <button class="btn btn-danger"><strong>-</strong></button>
-                            <input type="text" class="" value="1">
-                            <button class="btn btn-success"><strong>+</strong></button>
-                        </div>
-                    </div>
+<!-- Cart Start -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            <h5 class="bg-danger">Customer Details</h5>
+            <p><strong>Email: {{request.user.username}}</strong></p>
+            <h5 class="bg-danger">Cart Details</h5>
+            <div class="row">
+                {% for item in product %}
+                <div class="col-md-4">
+                    <img src="{{item.pid.pimage.url}}" alt="" class="img-fluid">
                 </div>
-                <div class="col-md-3">
-                    <h5 class="bg-body-secondary p-2">Total Amount</h5>
-                    <p><strong>Total (2 Items) : 2 Rs</strong></p>
-                    <button class="btn btn-primary">Place Order</button>
+                <div class="col-md-8">
+                    <p><strong>Name: {{item.pid.name}}</strong></p>
+                    <p><strong>Price:{{item.pid.price}}</strong></p>
+                    <p><strong>Category: {% if item.pid.category == 1 %}
+                        Mobiles
+                        {% elif item.pid.category == 2 %}
+                        Clothes
+                        {% else %}
+                        Shoes 
+                        {% endif %}
+                    </strong></p>
+                    <p><strong>Product Details: {{item.pid.pdetails}}</strong></p>
+                    <p><strong>Quantity:</strong></p>
+                    <a href="/remove_quantity/{{item.id}}"><button class="btn btn-danger">-</button></a>
+                    <input type="number" id="quantity-{{item.id}}" value="{{item.quantity}}" >
+                    <a href="/add_quantity/{{item.id}}"><button class="btn btn-success">+</button></a>
+                  <a href="/remove/{{item.id}}"><button class="btn btn-danger">Remove</button></a>  
                 </div>
+                {% endfor %}
             </div>
-            <!-- cart end  -->
-{% endblock 'content' %} 
+        </div>
+        <div class="col-md-3">
+            <h5 class="bg-danger">Total Amount</h5>
+  
+   <p><Strong>Total ({{np}} Items): Rs. {{total_price}}</Strong></p>
+           
+            <button class="btn btn-primary">Place Order</button>
+        </div>
+      </div>   
+</div>
+ 
+<!-- <script>
+    function decrementQuantity(id) {
+  var input = document.getElementById("quantity-" + id);
+  var value = input.value;
+  // Do something with the value
+}
+
+function incrementQuantity(id) {
+  var input = document.getElementById("quantity-" + id);
+  var value = input.value;
+  // Do something with the value
+}
+</script> -->
+<!-- Cart End -->
+
+{% endblock 'content' %}

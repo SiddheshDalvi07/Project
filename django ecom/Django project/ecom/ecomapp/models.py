@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Product(models.Model):
     CATEGORY_CHOICES=[(1,'Mobiles'),(2,'Clothes'),(3,'Shoes')]
     name=models.CharField(max_length=100)
-    price=models.FloatField()
+    price=models.DecimalField(decimal_places=2,max_digits=100)
     pdetails=models.CharField(max_length=300)
     xdetails=models.CharField(max_length=600,default="product core details")
     category=models.IntegerField(choices=CATEGORY_CHOICES)
@@ -17,6 +17,7 @@ class Product(models.Model):
 class Cart(models.Model):
     uid = models.ForeignKey(User,on_delete=models.CASCADE,db_column='uid')
     pid = models.ForeignKey(Product,on_delete=models.CASCADE,db_column='pid')
+    quantity = models.IntegerField(default=1)
     def __str__(self):
         return self.uid.username + " " + self.pid.name
 

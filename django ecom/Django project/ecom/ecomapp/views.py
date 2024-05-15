@@ -48,16 +48,30 @@ def pricerange(request):
         context['products']=products
         return render(request,'index.html',context)
     
-def addtocart(request,pid):
+# def addtocart(request,pid):
+#     if request.user.is_authenticated:
+#         uid = request.user.id
+#         u = User.objects.get(id=uid)
+#         p = Product.objects.get(id=pid)
+#         c = Cart.objects.create(uid=u,pid=p)
+#         c.save()
+#         return redirect("/")
+#     else:
+#         return redirect("/login")
+    
+def addtocart(request, pid):
     if request.user.is_authenticated:
         uid = request.user.id
         u = User.objects.get(id=uid)
         p = Product.objects.get(id=pid)
-        c = Cart.objects.create(uid=u,pid=p)
-        c.save()
+        c,created = Cart.objects.get_or_create(uid=u,pid=p)
+        if not created:
+            c.quantity += 1
+            c.save()
         return redirect("/")
     else:
         return redirect("/login")
+    
 
 
 
@@ -68,6 +82,42 @@ def addtocart(request,pid):
 #     context = {}
 #     context['product']=product
 #     return render(request, 'product_detail.html',context)
+
+
+def viewcart(request):
+    context={}
+    user_id= request.user.id
+    c=Cart.objects.filter(uid=user_id)
+    context['product']=c
+    np = len(c)
+    context['np']=np
+    
+    # total_price = sum(item.pid.price for item in c) #expression 
+
+    total_price = 0 
+    
+    for item in c:
+        total_price += item.pid.price * item.quantity     
+    context['total_price'] = total_price
+    return render(request,"cart.html",context)
+
+def removefromcart(request,cid):
+    c=Cart.objects.get(id=cid)
+    c.delete()
+    return redirect('/viewcart')
+
+def add_quantity(request, cid):
+    c = Cart.objects.get(id=cid)
+    c.quantity += 1
+    c.save()
+    return redirect('/viewcart')
+
+def remove_quantity(request, cid):
+    c = Cart.objects.get(id=cid)
+    if c.quantity > 1:
+        c.quantity -= 1
+        c.save() 
+    return redirect('/viewcart')
 
 
 

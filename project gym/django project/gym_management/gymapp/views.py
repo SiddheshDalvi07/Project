@@ -11,3 +11,8 @@ def offers(request):
 
 def freepass(request):
     return render(request,"1dayfreeguestpass.html")
+
+def accrecovery(request):
+    return render(request,"accrecovery.html")
+def abcoffee(request):
+    return render(request,"abcoffee.html")

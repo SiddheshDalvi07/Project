@@ -7,6 +7,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('offers/', views.offers, name='offers'),
     path('offers/1-day-free-guest-pass/', views.freepass, name='1-day-free-guest-pass'),
+    path('offers/accelerate-recovery-with-normatec-air-compression/', views.accrecovery, name='accelerate-recovery-with-normatec-air-compression'),
+    path('offers/abcoffee/', views.abcoffee, name='abcoffee'),
 ]
 
 # if settings.DEBUG:  

@@ -14,5 +14,18 @@ def freepass(request):
 
 def accrecovery(request):
     return render(request,"accrecovery.html")
+
 def abcoffee(request):
     return render(request,"abcoffee.html")
+
+def starttoday(request):
+    return render(request,"starttoday.html")
+
+def rapidmuscle(request):
+    return render(request,"rapidmuscle.html")
+
+def referafriend(request):
+    return render(request,"referafriend.html")
+
+def membership(request):
+    return render(request,"membership.html")

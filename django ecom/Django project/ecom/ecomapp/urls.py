@@ -17,6 +17,9 @@ urlpatterns = [
         path('remove/<cid>',views.removefromcart),
         path('add_quantity/<cid>/', views.add_quantity),
         path('remove_quantity/<cid>/', views.remove_quantity),
+        path('search/', views.search, name='search'),
+        path('viewcart/search/', views.search, name='search'),
+        path('viewcart/search/search', views.search, name='search'),
         
 ]
 

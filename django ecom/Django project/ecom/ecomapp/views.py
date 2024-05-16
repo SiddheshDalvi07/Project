@@ -121,6 +121,22 @@ def remove_quantity(request, cid):
 
 
 
+def search(request):
+    """
+    Handle search requests
+    """
+    query = request.GET.get('query')
+
+    if query:
+        results = Product.objects.filter(Q(name__icontains=query) | Q(pdetails__icontains=query))
+        return render(request, 'search.html', {'results': results, 'query': query})
+    else:
+        results = Product.objects.none()
+        return render(request, 'search.html', {'results': results, 'query': query})
+   
+
+
+
 
 
 

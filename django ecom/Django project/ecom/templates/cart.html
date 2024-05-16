@@ -30,7 +30,7 @@
                     <p><strong>Product Details: {{item.pid.pdetails}}</strong></p>
                     <p><strong>Quantity:</strong></p>
                     <a href="/remove_quantity/{{item.id}}"><button class="btn btn-danger">-</button></a>
-                    <input type="number" id="quantity-{{item.id}}" value="{{item.quantity}}" >
+                    <input type="number" value="{{item.quantity}}" >
                     <a href="/add_quantity/{{item.id}}"><button class="btn btn-success">+</button></a>
                   <a href="/remove/{{item.id}}"><button class="btn btn-danger">Remove</button></a>  
                 </div>

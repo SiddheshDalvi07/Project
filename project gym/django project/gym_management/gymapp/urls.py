@@ -13,6 +13,16 @@ urlpatterns = [
     path('offers/rapid-muscle-relief/', views.rapidmuscle, name='rapidmuscle'),
     path('offers/refer-a-friend/', views.referafriend, name='referafriend'),
     path('membership/', views.membership, name='membership'),
+    path('personal-training/', views.personaltraining, name='personaltraining'),
+    path('classes/', views.classes, name='classes'),
+    path('workout/kickboxing/', views.kickboxing, name='kickboxing'),
+    path('workout/indoor-cycling/', views.indoorcycling, name='indoorcycling'),
+    path('workout/zumba-fitness/', views.zumbafitness, name='zumbafitness'),
+    path('workout/power-yoga/', views.poweryoga, name='poweryoga'),
+    path('body-composition-assessment/', views.nutrition, name='nutrition'),
+    path('careers/', views.careers, name='careers'),
+    path('location/', views.location, name='location'),
+    path('about-us/', views.aboutus, name='aboutus'),
 ]
 
 # if settings.DEBUG:  

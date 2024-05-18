@@ -29,3 +29,33 @@ def referafriend(request):
 
 def membership(request):
     return render(request,"membership.html")
+
+def personaltraining(request):
+    return render(request,"personaltraining.html")
+
+def classes(request):
+    return render(request,"classes.html")
+
+def kickboxing(request):
+    return render(request,"kickboxing.html")
+
+def indoorcycling(request):
+    return render(request,"indoorcycling.html")
+
+def zumbafitness(request):
+    return render(request,"zumbafitness.html")
+
+def poweryoga(request):
+    return render(request,"poweryoga.html")
+
+def nutrition(request):
+    return render(request,"nutrition.html")
+
+def careers(request):
+    return render(request,"careers.html")
+
+def location(request):
+    return render(request,"location.html")
+
+def aboutus(request):
+    return render(request,"aboutus.html")

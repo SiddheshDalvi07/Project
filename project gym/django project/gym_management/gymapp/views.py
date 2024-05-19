@@ -59,3 +59,9 @@ def location(request):
 
 def aboutus(request):
     return render(request,"aboutus.html")
+
+def termscondition(request):
+    return render(request,"termscondition.html")
+
+def policy(request):
+    return render(request,"policy.html")

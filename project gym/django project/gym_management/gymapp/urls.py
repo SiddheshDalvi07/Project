@@ -23,6 +23,8 @@ urlpatterns = [
     path('careers/', views.careers, name='careers'),
     path('location/', views.location, name='location'),
     path('about-us/', views.aboutus, name='aboutus'),
+    path('terms-conditions/', views.termscondition, name='termscondition'),
+    path('membership-policy/', views.policy, name='policy'),
 ]
 
 # if settings.DEBUG:  

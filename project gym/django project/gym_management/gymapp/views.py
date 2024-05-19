@@ -65,3 +65,9 @@ def termscondition(request):
 
 def policy(request):
     return render(request,"policy.html")
+
+def login(request):
+    return render(request,"LoginPage.html")
+
+def register(request):
+    return render(request,"RegisterPage.html")

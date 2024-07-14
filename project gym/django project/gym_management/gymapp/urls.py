@@ -27,6 +27,9 @@ urlpatterns = [
     path('membership-policy/', views.policy, name='policy'),
     path('login/', views.login, name='login'),
     path('register/', views.register, name='register'),
+    path('trainerregister/', views.trainerregister, name='trainerregister'),
+    path('trainerlogin/', views.trainerlogin, name='trainerlogin'),
+    path('trainerlogout/', views.trainer_logout, name='trainerlogout'),
 ]
 
 # if settings.DEBUG:  

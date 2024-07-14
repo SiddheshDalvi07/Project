@@ -166,30 +166,42 @@
                 <li class="nav-item me-3">
                   <a class="nav-link" aria-current="page" href="/location">Location</a>
                 </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="/trainerlogout">logout</a>
+                </li>
               </ul>
 
 
               <ul class="navbar-nav ms-auto">
-                <li class=" dropdown  ">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Account
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Member Login</a></li>
-
-                    <li><a class="dropdown-item" href="/register">Sign Up</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
+                {% if user.is_authenticated %}
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trainer Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/trainer_logout">Logout</a></li>
+                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        </ul>
                     </li>
-                    <li><a class="dropdown-item" href="#">Trainer Login</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
+          
+                {% else %}
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/memberlogin">Member Login</a></li>
+                            <li><a class="dropdown-item" href="/membersignup">Sign Up</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/trainerlogin">Trainer Login</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/adminlogin">Admin Login</a></li>
+                        </ul>
                     </li>
-                    <li><a class="dropdown-item" href="#">Admin Login</a></li>
-                  </ul>
-                </li>
-              </ul>
+                {% endif %}
+            </ul>
+            
+            </ul>
             </div>
           </div>
         </nav>

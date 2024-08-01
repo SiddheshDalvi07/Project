@@ -37,7 +37,8 @@ To get started with Django eKart, follow these steps:
 1. **Clone the Repository:**
     ```sh
     git clone https://github.com/SiddheshDalvi07/QuickMart.git
-    cd django-ekart
+    cd django project
+    cd ecom
     ```
 
 2. **Create a Virtual Environment:**
@@ -52,7 +53,6 @@ To get started with Django eKart, follow these steps:
     ```
 
 4. **Set Up the Database:**
-    - For PostgreSQL, configure your `DATABASES` setting in `settings.py`.
     - For SQLite (default), no additional configuration is needed.
 
 5. **Apply Migrations:**
